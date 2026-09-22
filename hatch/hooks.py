@@ -5,6 +5,48 @@ app_description = "seat booking"
 app_email = "sanusundaram98@gmail.com"
 app_license = "mit"
 
+
+fixtures=[
+    {
+        "dt":"Resource",
+        "filters":[
+            ["name","in",
+            ["Room A","Room B","Hot Desk Zone"]]
+        ]
+    } 
+    ]
+
+
+fixtures=[
+    {
+        "dt":"Role",
+        "filters":[
+            ["name","in",
+            ["Hatch Member","Front Desk Staff","Space Manager"]]
+        ]
+    } 
+    ]
+
+
+permission_query_conditions = {
+    "Booking": "hatch.permission.booking_query"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Apps
 # ------------------
 

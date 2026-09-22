@@ -1,0 +1,38 @@
+[
+ {
+  "capacity": 6,
+  "docstatus": 0,
+  "doctype": "Resource",
+  "floor_location": "4th Floor",
+  "hourly_rate": 1000.0,
+  "is_active": 1,
+  "modified": "2026-09-22 15:14:42.263126",
+  "name": "Room A",
+  "resource_name": "Room A",
+  "resource_type": "Meeting Room"
+ },
+ {
+  "capacity": 3,
+  "docstatus": 0,
+  "doctype": "Resource",
+  "floor_location": "4th Floor",
+  "hourly_rate": 700.0,
+  "is_active": 1,
+  "modified": "2026-09-22 15:15:19.837499",
+  "name": "Room B",
+  "resource_name": "Room B",
+  "resource_type": "Meeting Room"
+ },
+ {
+  "capacity": 12,
+  "docstatus": 0,
+  "doctype": "Resource",
+  "floor_location": "4th Floor",
+  "hourly_rate": 400.0,
+  "is_active": 1,
+  "modified": "2026-09-22 15:16:11.154089",
+  "name": "Hot Desk Zone",
+  "resource_name": "Hot Desk Zone",
+  "resource_type": "Hot Desk Zone"
+ }
+]
