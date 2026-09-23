@@ -28,7 +28,7 @@
    "fieldname": "resource_type",
    "fieldtype": "Select",
    "label": "Resource Type",
-   "options": "Meeting Room\nHot Desk Zone\nPhone Booth"
+   "options": "Meeting Room\nHot Desk Zone\nConference Room"
   },
   {
    "fieldname": "capacity",
@@ -59,7 +59,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-22 16:28:17.777930",
+ "modified": "2026-09-23 16:13:28.941945",
  "modified_by": "Administrator",
  "module": "Hatch",
  "name": "Resource",
@@ -79,33 +79,18 @@
    "write": 1
   },
   {
-   "email": 1,
-   "export": 1,
-   "print": 1,
    "read": 1,
-   "report": 1,
-   "role": "Hatch Member",
-   "share": 1
+   "role": "Hatch Member"
   },
   {
-   "email": 1,
-   "export": 1,
-   "print": 1,
    "read": 1,
-   "report": 1,
-   "role": "Front Desk Staff",
-   "share": 1
+   "role": "Front Desk Staff"
   },
   {
    "create": 1,
    "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
    "read": 1,
-   "report": 1,
    "role": "Space Manager",
-   "share": 1,
    "write": 1
   }
  ],
