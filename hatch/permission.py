@@ -19,13 +19,10 @@ import frappe
 def booking_query(user):
     if not user:
         user = frappe.session.user
-
     if "Front Desk Staff" in frappe.get_roles(user):
         return ""
-
     if "Space Manager" in frappe.get_roles(user):
         return ""
-
     return """
         `tabBooking`.`member` IN (
             SELECT `name`

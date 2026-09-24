@@ -36,15 +36,23 @@ permission_query_conditions = {
 after_install = "hatch.install.after_install"
 
 
-# doc_events = {
-#     "*": {
-#         "on_update": "hatch.audit.log_change",
-#         "on_submit": "hatch.audit.log_change",
-#         "on_cancel": "hatch.audit.log_change",
-#     }
-# }
+doc_events = {
+    "*": {
+        "on_update": "hatch.audit.log_change",
+        "on_submit": "hatch.audit.log_change",
+        "on_cancel": "hatch.audit.log_change",
+    },
+    "Booking": {
+        "before_print": "hatch.hatch.doctype.booking.booking.before_print"
+    }
+}
 
 
+scheduler_events = {
+    "hourly": [
+        "hatch.tasks.release_expired_holds"
+    ]
+}
 
 
 
