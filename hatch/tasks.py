@@ -16,7 +16,7 @@ def release_expired_holds():
         filters={
             "status":"Pending Confirmation",
             "creation":["<",expiry_time],
-            "docstatus":1
+            "docstatus":0
         },
         fields=["name"],
         limit_page_length=0
@@ -24,4 +24,4 @@ def release_expired_holds():
     for booking in bookings:
         doc=frappe.get_doc("Booking",booking.name)
         if doc.status=="Pending Confirmation":
-            doc.cancel()
+            doc.db_set("status","Cancelled",update_modified=False)

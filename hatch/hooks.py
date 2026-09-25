@@ -49,9 +49,10 @@ doc_events = {
 
 
 scheduler_events = {
-    "hourly": [
-        "hatch.tasks.release_expired_holds"
-    ]
+    
+    "cron": {
+        "*/1 * * * *":["hatch.tasks.release_expired_holds"]
+    }
 }
 
 

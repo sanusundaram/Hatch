@@ -153,3 +153,28 @@ def reassign_booking(booking_name,new_member):
         frappe.throw("Invalid booking state.")
 
     return True
+
+     # -----------------group L1------------------------
+import frappe
+
+@frappe.whitelist()
+def get_availability():
+    resource=frappe.form_dict.get("resource")
+    booking_date=frappe.form_dict.get("booking_date")
+    start_time=frappe.form_dict.get("start_time")
+    end_time=frappe.form_dict.get("end_time")
+    capacity=frappe.db.get_value("Resource",resource,"capacity")
+    booked=frappe.db.sql("""
+        SELECT COALESCE(SUM(headcount),0)
+        FROM `tabBooking`
+        WHERE resource=%s
+        AND booking_date=%s
+        AND start_time<%s
+        AND end_time>%s
+        AND status IN ('Pending Confirmation','Confirmed','Checked-In')
+    """,(resource,booking_date,end_time,start_time))[0][0]
+    return{
+        "capacity":capacity,
+        "booked":booked,
+        "available":max(0,capacity-booked)
+    }
